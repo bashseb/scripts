@@ -18,7 +18,7 @@ set -o nounset
 
 USAGE="Usage: $0 <length in seconds> <name-string (e.g Pasticcio)>"
 
-if [ "$#" -lt 2 ]; then echo $USAGE; exit 1; fi
+if [ "$#" -ne 2 ]; then echo $USAGE; exit 1; fi
 
 mkdir -p "${TARGET_DIR}"
 dat=$(date  +%Y-%m-%d)
