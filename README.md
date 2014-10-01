@@ -16,3 +16,8 @@ scripts
   * `WWW_DIR`: directory of a path of the webserver (e.g. `/var/www/oe1`, has to be owned by the executing user)
   * `WWW_BASE_URL` web address of webserver, e.g. `http://myserver.at/oe1`. This is where links are made available.
   
+ Conveniently use this is a `cronjob`, e.g. 
+
+    # Matrix                                                                        
+    # 30 min, recording 31 * 60 secs                                                
+    29 22 * * 0 : Matrix Computer und neue Medien 30min; sleep 40; /home/seb/scripts/recOe1.sh 1860 Matrix
