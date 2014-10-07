@@ -1,6 +1,20 @@
 scripts
 =======
 
+* tex_compile_makefile.sh
+
+  This script is to be called with a tex file as argument.
+  
+  `Usage: $0 <path-to-main.tex> <other make options. e.g. '-j2 -B'>`
+  
+  This is useful for externalized tikz pictures which use `mode=list and make`, where a makefile is written. If externalization is not active (or another `mode`), then pdflatex is called. 
+  
+  In case the makefile indicates an update to the  set of `tikzpicture`s is necessary, it will run `make -j `, and `pdflatex` afterwards. 
+  
+  Note that this script still requires to be called twice if there were changes in the figures have been done. I prefer it this way. Otherwise add another call to pdflatex.
+  
+  Mostly inspired by http://tex.stackexchange.com/questions/145501/integrating-latexmk-and-tikz-external-mode-list-and-make
+
 * recOe1.sh: Records from oe1 webstream and saves it into a file `<name-string>-<date>.mp3`
  
   Usage: `./recOe1.sh <length in seconds> <name-string (e.g Pasticcio)>`
