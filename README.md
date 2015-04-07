@@ -36,3 +36,5 @@ scripts
 # 30 min, recording 31 * 60 secs                                                
 29 22 * * 0 : Matrix Computer und neue Medien 30min; sleep 40; /home/seb/scripts/recOe1.sh 1860 Matrix
    ```
+
+
